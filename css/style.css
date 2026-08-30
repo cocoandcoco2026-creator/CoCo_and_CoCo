@@ -1,0 +1,2406 @@
+ /* =========================
+    基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+
+    background: #f5f1e8;
+    color: #1a1a1a;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+    ヘッダー
+========================= */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 6%;
+
+    z-index: 1000;
+
+    background: rgba(10, 10, 10, 0.75);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+}
+
+
+.logo {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: opacity 0.3s;/*0.3s;*/
+}
+
+
+nav a:hover {
+    opacity: 0.5;/*0.5;*/
+}
+
+
+/* =========================
+    ファーストビュー
+========================= */
+
+.hero {
+
+    height: 100vh;
+
+    min-height: 700px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.55)
+        ),
+
+        url("images/main.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+
+    padding: 30px;
+
+    animation: fadeIn 2s ease;
+}
+
+
+.brand-name {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(45px, 8vw, 110px);
+
+    letter-spacing: 12px;
+
+    font-weight: normal;
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-overlay h1 {
+
+    margin: 18px 0 28px;
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(3rem, 7vw, 6.5rem);
+
+    font-weight: 400;
+
+    letter-spacing: 0.12em;
+
+    line-height: 1.08;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.35),
+        0 4px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 240px;
+
+    padding: 15px 30px;
+
+    margin-top: 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.18em;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    backdrop-filter: blur(4px);
+
+}
+
+
+/* マウスを乗せた時 */
+
+.hero-button:hover {
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #222222;
+
+    border-color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* クリック時 */
+
+.hero-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero-overlay h1 {
+
+        font-size: clamp(2.8rem, 15vw, 4.5rem);
+
+        letter-spacing: 0.08em;
+
+        line-height: 1.12;
+
+        margin-top: 15px;
+
+        margin-bottom: 24px;
+
+    }
+
+
+    .hero-button {
+
+        min-width: 210px;
+
+        padding: 14px 24px;
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.14em;
+
+    }
+
+}
+
+/* =========================
+ブランドロゴ
+========================= */
+
+.brand-logo-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.brand-logo {
+
+    /*width: min(65vw, 650px);*/
+    width: min(80vw, 800px);
+
+    height: auto;
+
+    display: block;
+
+    filter:
+
+        drop-shadow(
+            0 15px 35px
+            rgba(0, 0, 0, 0.45)
+        );
+
+    animation:
+
+        logoFadeIn
+        2.5s
+        ease-out;
+
+}
+.brand-logo_mini {
+
+    width: min(25vw, 250px);
+
+    height: auto;
+
+    display: block;
+
+    filter:
+
+        drop-shadow(
+            0 2px 5px
+            rgba(0, 0, 0, 0.45)
+        );
+
+    animation:
+
+        logoFadeIn
+        2.5s
+        ease-out;
+
+}
+
+
+/* ロゴ表示アニメーション */
+
+@keyframes logoFadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(25px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.catch-copy {
+
+    margin-top: 30px;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #d8bd7c;
+}
+
+
+.hero-text {
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    line-height: 2.2;
+
+    color: #eeeeee;
+}
+
+
+.scroll-text {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+    共通セクション
+========================= */
+
+section {
+
+    padding:
+
+        150px 8%;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-subtitle {
+
+    text-align: center;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #9b7c3f;
+
+    margin-bottom: 70px;
+}
+
+/* =========================
+    ブランドストーリー
+========================= */
+
+.story {
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.story p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    line-height: 2.5;
+
+    color: #dddddd;
+}
+
+.story h1 {
+
+    margin: 20px 0 35px;
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(1.5rem, 1.8vw, 1.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.08em;
+
+    color: #444444;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MESSAGE SECTION
+========================= */
+
+.message-section {
+
+    width: 100%;
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #f7f5f1;
+
+}
+
+
+/* =========================
+   MESSAGE IMAGE
+========================= */
+
+.message-image {
+
+    width: 100%;
+
+    min-height: 720px;
+
+    overflow: hidden;
+
+}
+
+
+.message-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 1.2s ease;
+
+}
+
+
+/* 写真にマウスを乗せた時 */
+
+.message-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================
+   MESSAGE CONTENT
+========================= */
+
+.message-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding:
+        clamp(70px, 10vw, 150px)
+        clamp(35px, 8vw, 130px);
+
+    box-sizing: border-box;
+
+    background: #f7f5f1;
+
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.message-content .section-label {
+
+    margin: 0 0 25px;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.28em;
+
+    color: #9b8b6e;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.message-content h2 {
+
+    margin: 0 0 40px;
+    /*max-width: 800px;*//*追加20260829*/
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(2.2rem, 4vw, 4.3rem);/*(2.2rem, 4vw, 4.3rem);*/
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.08em;
+
+    color: #242424;
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.message-content p:not(.section-label) {
+
+    margin: 0;
+
+    max-width: 520px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+
+    font-weight: 400;
+
+    line-height: 2.2;
+
+    letter-spacing: 0.08em;
+
+    color: #555555;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .message-section {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+    }
+
+
+    .message-image {
+
+        min-height: 480px;
+
+    }
+
+
+    .message-content {
+
+        min-height: 550px;
+
+        padding:
+            80px
+            clamp(30px, 8vw, 60px);
+
+    }
+
+
+    .message-content h2 {
+
+        margin-bottom: 32px;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .message-image {
+
+        min-height: 380px;
+
+    }
+
+
+    .message-content {
+
+        min-height: auto;
+
+        padding:
+            70px
+            28px;
+
+    }
+
+
+    .message-content .section-label {
+
+        margin-bottom: 20px;
+
+        font-size: 0.65rem;
+
+    }
+
+
+    .message-content h2 {
+
+        font-size: 2.1rem;
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .message-content p:not(.section-label) {
+
+        font-size: 0.9rem;
+
+        line-height: 2.05;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+    コレクション
+========================= */
+
+.collection {
+
+    background: #f5f1e8;
+}
+
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 50px;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.product {
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s,
+        opacity 0.4s;
+}
+
+
+.product:hover {
+
+    transform:
+        translateY(-10px);
+
+    opacity: 0.85;
+}
+
+
+.product img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    background: #ddd;
+}
+
+
+.product h3 {
+
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+
+.product p {
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+
+.view-button {
+
+    display: inline-block;
+
+    margin-top: 70px;
+
+    padding: 18px 50px;
+
+    border: 1px solid #222;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+
+.view-button:hover {
+
+    background: #222;
+
+    color: white;
+}
+
+
+.button-center {
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   COLLECTION SECTION
+========================= */
+
+.collection-section {
+
+    width: 100%;
+
+    padding:
+        clamp(100px, 14vw, 200px)
+        clamp(25px, 6vw, 100px);
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.collection-section .section-label {
+
+    margin: 0 0 25px;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.3em;
+
+    color: #9b8b6e;
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.collection-section h2 {
+
+    margin: 0;
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(2.4rem, 5vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.08em;
+
+    color: #242424;
+
+}
+
+
+/* =========================
+   COLLECTION DESCRIPTION
+========================= */
+
+.collection-description {
+
+    margin:
+        30px
+        auto
+        clamp(60px, 8vw, 110px);
+
+    max-width: 700px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+
+    font-weight: 400;
+
+    line-height: 2.1;
+
+    letter-spacing: 0.08em;
+
+    color: #666666;
+
+}
+
+
+/* =========================
+   COLLECTION GRID
+========================= */
+
+.collection-grid {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        clamp(20px, 3vw, 55px);
+
+}
+
+
+/* =========================
+   COLLECTION ITEM
+========================= */
+
+.collection-item {
+
+    display: block;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: #f7f5f1;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+}
+
+
+/* 商品カード全体のホバー */
+
+.collection-item:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.collection-item img {
+
+    width: 100%;
+
+    aspect-ratio: 7 / 5;/* 4 / 5 */
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 1s ease;
+
+}
+
+
+/* 商品画像をゆっくり拡大 */
+
+.collection-item:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   COLLECTION INFO
+========================= */
+
+.collection-info {
+
+    padding:
+        clamp(28px, 4vw, 50px)
+        clamp(20px, 3vw, 40px)
+        clamp(35px, 5vw, 60px);
+
+    box-sizing: border-box;
+
+    background: #f7f5f1;
+
+}
+
+
+/* =========================
+   COLLECTION CATEGORY
+========================= */
+
+.collection-category {
+
+    margin:
+        0
+        0
+        15px;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.28em;
+
+    color: #9b8b6e;
+
+}
+
+
+/* =========================
+   PRODUCT TITLE
+========================= */
+
+.collection-info h3 {
+
+    margin:
+        0
+        0
+        20px;
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.05em;
+
+    color: #242424;
+
+}
+
+
+/* =========================
+   PRODUCT DESCRIPTION
+========================= */
+
+.collection-info p:not(.collection-category) {
+
+    margin: 0;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size: 0.88rem;
+
+    font-weight: 400;
+
+    line-height: 2;
+
+    letter-spacing: 0.06em;
+
+    color: #777777;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .collection-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 30px;
+
+    }
+
+
+    /*
+     * 商品が3つの場合、
+     * 3つ目を中央寄せ
+     */
+
+    .collection-item:nth-child(3) {
+
+        grid-column: 1 / -1;
+
+        width: 50%;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .collection-section {
+
+        padding:
+            100px
+            25px;
+
+    }
+
+
+    .collection-section .section-label {
+
+        margin-bottom: 20px;
+
+        font-size: 0.65rem;
+
+        letter-spacing: 0.24em;
+
+    }
+
+
+    .collection-section h2 {
+
+        font-size: 2.4rem;
+
+        line-height: 1.3;
+
+    }
+
+
+    .collection-description {
+
+        margin:
+            25px
+            auto
+            60px;
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .collection-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .collection-item:nth-child(3) {
+
+        grid-column: auto;
+
+        width: 100%;
+
+        margin: 0;
+
+    }
+
+
+    .collection-info {
+
+        padding:
+            30px
+            25px
+            40px;
+
+    }
+
+}
+
+
+
+
+/* =========================
+   GIFT SECTION
+========================= */
+
+.gift-section {
+
+    width: 100%;
+
+    padding:
+        clamp(110px, 14vw, 190px)
+        clamp(25px, 7vw, 110px);
+
+    box-sizing: border-box;
+
+    background: #f7f5f1;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.gift-section .section-label {
+
+    margin:
+        0
+        0
+        25px;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.3em;
+
+    color: #9b8b6e;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.gift-section h2 {
+
+    max-width: 900px;
+
+    margin:
+        0
+        auto
+        clamp(70px, 9vw, 120px);
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+
+    font-weight: 400;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.08em;
+
+    color: #242424;
+
+}
+
+
+/* =========================
+   GIFT LIST
+========================= */
+
+.gift-list {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    border-top:
+        1px solid
+        rgba(155, 139, 110, 0.35);
+
+}
+
+
+/* =========================
+   GIFT ITEM
+========================= */
+
+.gift-item {
+
+    display: grid;
+
+    grid-template-columns:
+        90px
+        1fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding:
+        45px
+        20px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid
+        rgba(155, 139, 110, 0.35);
+
+    transition:
+        background 0.4s ease,
+        padding-left 0.4s ease;
+
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.gift-item > span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border:
+        1px solid
+        rgba(155, 139, 110, 0.6);
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size: 0.85rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.08em;
+
+    color: #9b8b6e;
+
+}
+
+
+/* =========================
+   GIFT ITEM TITLE
+========================= */
+
+.gift-item h3 {
+
+    margin:
+        0
+        0
+        13px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.08em;
+
+    color: #292929;
+
+}
+
+
+/* =========================
+   GIFT ITEM TEXT
+========================= */
+
+.gift-item p {
+
+    margin: 0;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 400;
+
+    line-height: 2;
+
+    letter-spacing: 0.06em;
+
+    color: #707070;
+
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.gift-item:hover {
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    padding-left: 35px;
+
+}
+
+
+/* =========================
+   HOVER NUMBER
+========================= */
+
+.gift-item:hover > span {
+
+    background: #ffffff;
+
+    border-color: #9b8b6e;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .gift-section {
+
+        padding:
+            100px
+            30px;
+
+    }
+
+
+    .gift-section h2 {
+
+        margin-bottom: 70px;
+
+        font-size: clamp(2.2rem, 7vw, 3.5rem);
+
+    }
+
+
+    .gift-item {
+
+        grid-template-columns:
+            65px
+            1fr;
+
+        gap: 25px;
+
+        padding:
+            35px
+            10px;
+
+    }
+
+
+    .gift-item:hover {
+
+        padding-left: 20px;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .gift-section {
+
+        padding:
+            90px
+            22px;
+
+    }
+
+
+    .gift-section .section-label {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 0.24em;
+
+    }
+
+
+    .gift-section h2 {
+
+        margin-bottom: 55px;
+
+        font-size: 2.25rem;
+
+        line-height: 1.4;
+
+    }
+
+
+    .gift-item {
+
+        grid-template-columns:
+            48px
+            1fr;
+
+        gap: 18px;
+
+        padding:
+            30px
+            5px;
+
+    }
+
+
+    .gift-item > span {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 0.75rem;
+
+    }
+
+
+    .gift-item h3 {
+
+        margin-bottom: 10px;
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .gift-item p {
+
+        font-size: 0.82rem;
+
+        line-height: 1.9;
+
+    }
+
+
+    .gift-item:hover {
+
+        padding-left: 10px;
+
+    }
+
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 680px;
+
+    padding:
+        clamp(110px, 15vw, 200px)
+        30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(25, 25, 25, 0.72),
+            rgba(25, 25, 25, 0.72)
+        ),
+        url("../images/final-bg.heic");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.final-section .section-label {
+
+    margin:
+        0
+        0
+        30px;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.32em;
+
+    color: #d0bd98;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.final-section h2 {
+
+    margin:
+        0
+        0
+        40px;
+
+    max-width: 1000px;/*900px*/
+
+    font-family:
+        "Times New Roman",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        clamp(2.5rem, 6vw, 5.5rem);/* 6vw, 5.5rem);*/
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.1em;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 20px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.final-section > p:not(.section-label) {
+
+    margin:
+        0
+        auto
+        45px;
+
+    max-width: 650px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(0.9rem, 1.3vw, 1.05rem);
+
+    font-weight: 400;
+
+    line-height: 2.2;
+
+    letter-spacing: 0.1em;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+}
+
+
+/* =========================
+   FINAL BUTTON
+========================= */
+
+.final-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 240px;
+
+    padding:
+        16px
+        34px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(208, 189, 152, 0.8);
+
+    background:
+        transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.22em;
+
+    transition:
+        background 0.5s ease,
+        color 0.5s ease,
+        border-color 0.5s ease,
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.final-button:hover {
+
+    background:
+        #ffffff;
+
+    color:
+        #292929;
+
+    border-color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =========================
+   BUTTON ACTIVE
+========================= */
+
+.final-button:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================
+   DECORATIVE LINE
+========================= */
+
+.final-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 50%;
+
+    width: 1px;
+
+    height: 55px;
+
+    background:
+        rgba(208, 189, 152, 0.7);
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/* =========================
+   BOTTOM DECORATION
+========================= */
+
+.final-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 70px;
+
+    left: 50%;
+
+    width: 45px;
+
+    height: 1px;
+
+    background:
+        rgba(208, 189, 152, 0.6);
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .final-section {
+
+        min-height: 620px;
+
+        padding:
+            120px
+            30px;
+
+        background-attachment:
+            scroll;
+
+    }
+
+
+    .final-section h2 {
+
+        font-size:
+            clamp(2.3rem, 8vw, 4rem);
+
+        letter-spacing:
+            0.07em;
+
+    }
+
+
+    .final-section > p:not(.section-label) {
+
+        font-size:
+            0.9rem;
+
+        line-height:
+            2.05;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .final-section {
+
+        min-height:
+            580px;
+
+        padding:
+            100px
+            24px;
+
+    }
+
+
+    .final-section .section-label {
+
+        margin-bottom:
+            25px;
+
+        font-size:
+            0.63rem;
+
+        letter-spacing:
+            0.23em;
+
+    }
+
+
+    .final-section h2 {
+
+        margin-bottom:
+            30px;
+
+        font-size:
+            2.35rem;
+
+        line-height:
+            1.45;
+
+    }
+
+
+    .final-section > p:not(.section-label) {
+
+        margin-bottom:
+            40px;
+
+        font-size:
+            0.83rem;
+
+        line-height:
+            2;
+
+        letter-spacing:
+            0.07em;
+
+    }
+
+
+    .final-button {
+
+        min-width:
+            210px;
+
+        padding:
+            15px
+            25px;
+
+        font-size:
+            0.67rem;
+
+        letter-spacing:
+            0.17em;
+
+    }
+
+
+    .final-section::before {
+
+        top:
+            45px;
+
+        height:
+            35px;
+
+    }
+
+
+    .final-section::after {
+
+        bottom:
+            40px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+    UNITY WORLD
+========================= */
+
+.world {
+
+    min-height: 800px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+
+        url("images/world.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.world-content {
+
+    max-width: 750px;
+}
+
+
+.world-title {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 6vw, 80px);
+
+    font-weight: normal;
+
+    letter-spacing: 8px;
+}
+
+
+.world p {
+
+    margin-top: 35px;
+
+    font-size: 14px;
+
+    line-height: 2.5;
+
+    letter-spacing: 2px;
+
+    color: #eeeeee;
+}
+
+
+.world-button {
+
+    display: inline-block;
+
+    margin-top: 55px;
+
+    padding: 20px 60px;
+
+    border: 1px solid #d8bd7c;
+
+    color: #d8bd7c;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    transition: 0.3s;
+}
+
+
+.world-button:hover {
+
+    background: #d8bd7c;
+
+    color: #111;
+}
+
+
+/* =========================
+    フッター
+========================= */
+
+footer {
+
+    background: #080808;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+
+.footer-logo {
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    letter-spacing: 5px;
+
+    color: white;
+
+    margin-bottom: 30px;
+}
+
+
+footer p {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+    アニメーション
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+    スマートフォン
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+
+        padding: 20px 25px;
+    }
+
+
+    nav {
+
+        gap: 15px;
+    }
+
+
+    nav a {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .logo {
+
+        font-size: 15px;
+
+        letter-spacing: 2px;
+    }
+
+
+    section {
+
+        padding:
+            100px 7%;
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+    }
+
+
+    .hero-text {
+
+        font-size: 12px;
+    }
+
+}
