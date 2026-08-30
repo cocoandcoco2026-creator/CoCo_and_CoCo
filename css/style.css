@@ -1449,6 +1449,10 @@ section {
 
 }
 
+.gift-list a { /* 20260831 */
+    text-decoration: none;
+}
+
 
 /* =========================
    GIFT ITEM
