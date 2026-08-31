@@ -1345,7 +1345,7 @@ section {
 
         /*gap:
             clamp(20px, 3vw, 55px);*/
-        gap: 32px;
+        gap: 22px;/*32*/
 
     }
     /*.collection-grid { 参考用:タブレット
@@ -1369,13 +1369,17 @@ section {
     }
 
 
-    .collection-info {
-
+    /*.collection-info {
         padding:
             30px
             25px
             40px;
-
+    }*/
+    .collection-info {
+        padding:
+            25px
+            15px
+            30px;
     }
 
     .collection-info h3 { /* 20260831 */
