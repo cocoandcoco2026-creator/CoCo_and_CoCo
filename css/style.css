@@ -1236,6 +1236,7 @@ section {
     letter-spacing: 0.06em;
 
     color: #777777;
+    color: red;
 
 }
 
@@ -1280,7 +1281,7 @@ section {
    MOBILE
 ========================= */
 
-@media (max-width: 950px) {/*700px*/
+@media (max-width: 800px) {/*700px*/
 
     .collection-section {
 
