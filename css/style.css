@@ -1369,18 +1369,18 @@ section {
     }
 
 
-    /*.collection-info {
+    .collection-info {
         padding:
             30px
             25px
             40px;
-    }*/
-    .collection-info {
+    }
+    /*.collection-info {
         padding:
             25px
             15px
             30px;
-    }
+    }*/
 
     .collection-info h3 { /* 20260831 */
 
