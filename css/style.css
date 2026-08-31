@@ -262,7 +262,7 @@ nav a:hover {
    MOBILE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {/*600px*/
 
     .hero-overlay h1 {
 
@@ -1280,7 +1280,7 @@ section {
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {/*700px*/
 
     .collection-section {
 
@@ -1687,7 +1687,7 @@ section {
    TABLET
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {/*800*/
 
     .gift-section {
 
@@ -1735,7 +1735,7 @@ section {
    MOBILE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {/*600*/
 
     .gift-section {
 
@@ -2110,7 +2110,7 @@ section {
    TABLET
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {/**/
 
     .final-section {
 
@@ -2154,7 +2154,7 @@ section {
    MOBILE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {/**/
 
     .final-section {
 
