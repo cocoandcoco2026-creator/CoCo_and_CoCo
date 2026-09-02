@@ -1,0 +1,1121 @@
+/* =========================================================
+RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family:
+"Helvetica Neue",
+"Hiragino Kaku Gothic ProN",
+"Yu Gothic",
+sans-serif;
+
+
+color: #3d3935;
+background: #faf9f6;
+
+line-height: 1.8;
+
+letter-spacing: 0.04em;
+
+
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.site-header {
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+z-index: 10;
+
+display: flex;
+
+justify-content: space-between;
+align-items: center;
+
+padding:
+    28px
+    clamp(25px, 6vw, 90px);
+
+color: #ffffff;
+
+transition: 0.4s ease;
+
+}
+
+.brand {
+display: block;
+}
+
+.brand img {
+
+width:
+    clamp(120px, 14vw, 180px);
+
+height: auto;
+
+filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(
+        0 2px 5px
+        rgba(0, 0, 0, 0.2)
+    );
+
+}
+
+.navigation {
+
+display: flex;
+
+gap:
+    clamp(20px, 4vw, 55px);
+
+font-size: 11px;
+
+letter-spacing: 0.18em;
+
+}
+
+.navigation a {
+
+position: relative;
+
+padding-bottom: 5px;
+
+transition:
+    opacity 0.3s ease;
+
+}
+
+.navigation a::after {
+
+content: "";
+
+position: absolute;
+
+left: 0;
+bottom: 0;
+
+width: 0;
+height: 1px;
+
+background: currentColor;
+
+transition:
+    width 0.3s ease;
+
+}
+
+.navigation a:hover::after {
+width: 100%;
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero {
+
+position: relative;
+
+height: min(850px, 100vh);
+
+min-height: 650px;
+
+overflow: hidden;
+
+color: #ffffff;
+
+}
+
+.hero-image {
+
+position: absolute;
+
+inset: 0;
+
+background-image:
+    linear-gradient(
+        90deg,
+        rgba(25, 22, 19, 0.48),
+        rgba(25, 22, 19, 0.05)
+    ),
+    url("images/hero.jpg");
+
+background-size: cover;
+
+background-position: center;
+
+transform:
+    scale(1.02);
+
+}
+
+.hero-overlay {
+
+position: relative;
+
+z-index: 2;
+
+height: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: flex-start;
+
+padding-left:
+    clamp(30px, 10vw, 150px);
+
+padding-top: 70px;
+
+}
+
+.hero-small {
+
+font-size: 11px;
+
+letter-spacing: 0.28em;
+
+margin-bottom: 28px;
+
+opacity: 0.9;
+
+}
+
+.hero h1 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(48px, 7vw, 96px);
+
+font-weight: 400;
+
+line-height: 1.03;
+
+letter-spacing: 0.02em;
+
+margin-bottom: 30px;
+
+text-shadow:
+    0 2px 15px
+    rgba(0, 0, 0, 0.15);
+
+}
+
+.hero-description {
+
+font-size:
+    clamp(14px, 1.5vw, 18px);
+
+line-height: 2;
+
+margin-bottom: 35px;
+
+}
+
+.hero-button {
+
+display: inline-block;
+
+border: 1px solid
+    rgba(255, 255, 255, 0.8);
+
+padding:
+    13px 32px;
+
+font-size: 10px;
+
+letter-spacing: 0.22em;
+
+transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+}
+
+.hero-button:hover {
+
+background: #ffffff;
+
+color: #3d3935;
+
+}
+
+/* =========================================================
+COMMON
+========================================================= */
+
+.section-label {
+
+font-size: 10px;
+
+letter-spacing: 0.28em;
+
+color: #9b8e81;
+
+margin-bottom: 22px;
+
+}
+
+/* =========================================================
+INTRO
+========================================================= */
+
+.intro {
+
+text-align: center;
+
+padding:
+    clamp(100px, 13vw, 180px)
+    25px;
+
+background: #faf9f6;
+
+}
+
+.intro h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(32px, 4vw, 55px);
+
+font-weight: 400;
+
+line-height: 1.45;
+
+margin-bottom: 45px;
+
+color: #514a43;
+
+}
+
+.intro-text {
+
+font-size:
+    clamp(13px, 1.3vw, 16px);
+
+line-height: 2.2;
+
+margin-top: 20px;
+
+color: #716a63;
+
+}
+
+/* =========================================================
+CONCEPT IMAGE
+========================================================= */
+
+.concept-image-section {
+
+position: relative;
+
+height:
+    clamp(500px, 65vw, 800px);
+
+overflow: hidden;
+
+}
+
+.concept-image {
+
+position: absolute;
+
+inset: 0;
+
+background-image:
+    linear-gradient(
+        rgba(40, 35, 30, 0.08),
+        rgba(40, 35, 30, 0.25)
+    ),
+    url("images/concept.jpg");
+
+background-size: cover;
+
+background-position: center;
+
+}
+
+.concept-message {
+
+position: absolute;
+
+right:
+    clamp(30px, 10vw, 150px);
+
+bottom:
+    clamp(50px, 8vw, 110px);
+
+color: #ffffff;
+
+text-align: right;
+
+text-shadow:
+    0 2px 15px
+    rgba(0, 0, 0, 0.2);
+
+}
+
+.concept-message p {
+
+font-size: 10px;
+
+letter-spacing: 0.3em;
+
+margin-bottom: 20px;
+
+}
+
+.concept-message h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(35px, 5vw, 65px);
+
+font-weight: 400;
+
+line-height: 1.1;
+
+}
+
+/* =========================================================
+COLLECTION
+========================================================= */
+
+.collection {
+
+padding:
+    clamp(100px, 12vw, 170px)
+    clamp(20px, 6vw, 90px);
+
+background: #ffffff;
+
+}
+
+.section-heading {
+
+text-align: center;
+
+margin-bottom:
+    clamp(50px, 7vw, 90px);
+
+}
+
+.section-heading h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(34px, 4vw, 55px);
+
+font-weight: 400;
+
+color: #4c4640;
+
+margin-bottom: 20px;
+
+}
+
+.section-heading > p:last-child {
+
+font-size: 13px;
+
+color: #817970;
+
+line-height: 2;
+
+}
+
+/* =========================================================
+PRODUCT GRID
+========================================================= */
+
+.product-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(4, 1fr);
+
+gap:
+    clamp(15px, 3vw, 45px);
+
+max-width: 1450px;
+
+margin:
+    0 auto 70px;
+
+}
+
+.product-card {
+
+display: block;
+
+transition:
+    transform 0.4s ease;
+
+}
+
+.product-card:hover {
+
+transform:
+    translateY(-7px);
+
+}
+
+.product-image {
+
+position: relative;
+
+/*aspect-ratio: 0.85;*/
+aspect-ratio: 6 / 5;
+
+overflow: hidden;
+
+background: #f2f0ec;
+
+margin-bottom: 25px;
+
+}
+
+.product-image img {
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+transition:
+    transform 0.7s ease;
+
+}
+
+.product-card:hover
+.product-image img {
+
+transform:
+    scale(1.05);
+
+}
+
+.product-tag {
+
+position: absolute;
+
+top: 12px;
+left: 12px;
+
+background:
+    rgba(255, 255, 255, 0.88);
+
+padding:
+    4px 9px;
+
+font-size: 8px;
+
+letter-spacing: 0.15em;
+
+}
+
+.product-category {
+
+font-size: 9px;
+
+color: #a39485;
+
+letter-spacing: 0.22em;
+
+margin-bottom: 7px;
+
+}
+
+.product-info h3 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size: 22px;
+
+font-weight: 400;
+
+color: #4c4640;
+
+margin-bottom: 12px;
+
+line-height: 30px;
+
+}
+.product-info h3 .jp-title  { /* 20260831 */
+    font-size: 1.08em; /* emはh3に対して1.08倍 */
+    letter-spacing: 0.08em;
+}
+
+.product-description {
+
+font-size: 11px;
+
+line-height: 1.9;
+
+color: #807970;
+
+min-height: 42px;
+
+margin-bottom: 15px;
+
+}
+
+.product-price {
+
+font-size: 12px;
+
+letter-spacing: 0.08em;
+
+color: #514b45;
+
+}
+
+/* =========================================================
+VIEW MORE
+========================================================= */
+
+.view-more {
+
+display: block;
+
+width: fit-content;
+
+margin: auto;
+
+border-bottom:
+    1px solid #807970;
+
+padding-bottom: 7px;
+
+font-size: 10px;
+
+letter-spacing: 0.25em;
+
+color: #625b54;
+
+transition:
+    opacity 0.3s ease;
+
+}
+
+.view-more span {
+
+margin-left: 18px;
+
+transition:
+    margin-left 0.3s ease;
+
+}
+
+.view-more:hover span {
+
+margin-left: 28px;
+
+}
+
+/* =========================================================
+MESSAGE
+========================================================= */
+
+.message {
+
+background: #f1eee8;
+
+padding:
+    clamp(100px, 13vw, 180px)
+    25px;
+
+text-align: center;
+
+}
+
+.message-inner {
+
+max-width: 750px;
+
+margin: auto;
+
+}
+
+.message h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(32px, 4vw, 55px);
+
+font-weight: 400;
+
+line-height: 1.5;
+
+color: #514a43;
+
+margin-bottom: 45px;
+
+}
+
+.message-inner p:not(.section-label) {
+
+font-size: 13px;
+
+line-height: 2.3;
+
+color: #756e67;
+
+margin-top: 25px;
+
+}
+
+/* =========================================================
+GIFT
+========================================================= */
+
+.gift {
+
+min-height: 650px;
+
+position: relative;
+
+display: flex;
+
+align-items: center;
+
+justify-content: flex-start;
+
+overflow: hidden;
+
+background-image:
+    linear-gradient(
+        90deg,
+        rgba(30, 25, 21, 0.45),
+        rgba(30, 25, 21, 0.05)
+    ),
+    url("images/gift.jpg");
+
+background-size: cover;
+
+background-position: center;
+
+}
+
+.gift-content {
+
+color: #ffffff;
+
+margin-left:
+    clamp(30px, 10vw, 150px);
+
+max-width: 500px;
+
+}
+
+.gift-content .section-label {
+
+color:
+    rgba(255, 255, 255, 0.75);
+
+}
+
+.gift h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(40px, 5vw, 70px);
+
+font-weight: 400;
+
+line-height: 1.1;
+
+margin-bottom: 30px;
+
+}
+
+.gift-content > p:not(.section-label) {
+
+font-size: 13px;
+
+line-height: 2;
+
+margin-bottom: 35px;
+
+}
+
+.outline-button {
+
+display: inline-block;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+padding:
+    13px 28px;
+
+font-size: 10px;
+
+letter-spacing: 0.2em;
+
+transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+}
+
+.outline-button:hover {
+
+background: #ffffff;
+
+color: #4a443e;
+
+}
+
+/* =========================================================
+FINAL
+========================================================= */
+
+.final {
+
+text-align: center;
+
+padding:
+    clamp(110px, 15vw, 200px)
+    25px;
+
+background: #faf9f6;
+
+}
+
+.final h2 {
+
+font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+font-size:
+    clamp(38px, 5vw, 70px);
+
+font-weight: 400;
+
+line-height: 1.1;
+
+color: #514a43;
+
+margin-bottom: 35px;
+
+}
+
+.final > p:last-child {
+
+font-size: 13px;
+
+color: #7c746c;
+
+line-height: 2;
+
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer {
+
+text-align: center;
+
+padding:
+    70px 25px 35px;
+
+background: #eeeae4;
+
+color: #716960;
+
+}
+
+.footer-logo {
+
+width: 130px;
+
+margin:
+    0 auto 35px;
+
+opacity: 0.65;
+
+}
+
+.footer-links {
+
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 25px 40px;
+
+margin-bottom: 45px;
+
+}
+
+.footer-links a {
+
+font-size: 9px;
+
+letter-spacing: 0.2em;
+
+transition:
+    opacity 0.3s ease;
+
+}
+
+.footer-links a:hover {
+
+opacity: 0.55;
+
+}
+
+.copyright {
+
+font-size: 8px;
+
+letter-spacing: 0.15em;
+
+opacity: 0.55;
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+.product-grid {
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 45px 25px;
+}
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+.site-header {
+
+    padding:
+        20px 22px;
+}
+
+.brand img {
+
+    width: 115px;
+}
+
+.navigation {
+
+    gap: 15px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.12em;
+}
+
+.hero {
+
+    min-height: 650px;
+}
+
+.hero-overlay {
+
+    padding:
+        100px 25px 40px;
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(43px, 13vw, 65px);
+}
+
+.hero-description {
+
+    font-size: 13px;
+}
+
+.intro {
+
+    padding:
+        100px 25px;
+}
+
+.concept-image-section {
+
+    height: 550px;
+}
+
+.concept-message {
+
+    right: 25px;
+
+    bottom: 45px;
+}
+
+.concept-message h2 {
+
+    font-size: 40px;
+}
+
+.collection {
+
+    padding:
+        90px 18px;
+}
+
+.product-grid {
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        40px 14px;
+}
+
+.product-image {
+
+    margin-bottom: 17px;
+}
+
+.product-info h3 {
+
+    font-size: 17px;
+}
+
+.product-description {
+
+    font-size: 9px;
+
+    min-height: 50px;
+}
+
+.product-price {
+
+    font-size: 10px;
+}
+
+.message {
+
+    padding:
+        100px 25px;
+}
+
+.gift {
+
+    min-height: 600px;
+}
+
+.gift-content {
+
+    margin-left: 25px;
+
+    margin-right: 25px;
+}
+
+.gift h2 {
+
+    font-size: 42px;
+}
+
+.footer-links {
+
+    gap:
+        20px 25px;
+}
+
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+html {
+    scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+
+    animation: none !important;
+
+    transition: none !important;
+}
+
+}
