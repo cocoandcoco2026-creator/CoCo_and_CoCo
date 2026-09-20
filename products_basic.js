@@ -2,9 +2,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155857470",
         image: "images/product1.jpeg",
-        alt: "Éclat d’Azur",
-        title: "Éclat d’Azur",
-        jpTitle: "エクラ・ダジュール",
+        alt: "Azure Sky",
+        title: "Azure Sky",
+        jpTitle: "青空",
         category: "Neon Blue Apatite",
         description: [
             "自由な発想、",
@@ -16,9 +16,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155858614",
         image: "images/product2.jpeg",
-        alt: "Éclat des Astres",
-        title: "Éclat des Astres",
-        jpTitle: "エクラ・デ・アストル",
+        alt: "Four Seasons’ Radiance",
+        title: "Four Seasons’ Radiance",
+        jpTitle: "四季彩の輝き",
         category: "Lapis lazuli",
         description: [
             "本質を見つめ、",
@@ -30,9 +30,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155859061",
         image: "images/product3.jpeg",
-        alt: "Éclat Sylvestre",
-        title: "Éclat Sylvestre",
-        jpTitle: "エクラ・シルヴェストル",
+        alt: "Forest Dew",
+        title: "Forest Dew",
+        jpTitle: "森の雫",
         category: "Moss green kyanite",
         description: [
             "知的で洗練、",
@@ -44,9 +44,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155859461",
         image: "images/product4.jpeg",
-        alt: "Perle Unique",
-        title: "Perle Unique",
-        jpTitle: "ペルル・ユニーク",
+        alt: "Three Pearls",
+        title: "Three Pearls",
+        jpTitle: "三つの真珠",
         category: "Baroque pearl",
         description: [
             "上品さと華やかさ、",
@@ -58,9 +58,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155859674",
         image: "images/product5.jpeg",
-        alt: "Lumière Dorée",
-        title: "Lumière Dorée",
-        jpTitle: "リュミエール・ドレ",
+        alt: "Prism of Light",
+        title: "Prism of Light",
+        jpTitle: "光のプリズム",
         category: "Lemon Quartz",
         description: [
             "洗練された華やかさ、",
@@ -72,9 +72,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155860990",
         image: "images/product6.jpeg",
-        alt: "Éclat d’Amour",
-        title: "Éclat d’Amour",
-        jpTitle: "エクラ・ダムール",
+        alt: "Hydrangea",
+        title: "Hydrangea",
+        jpTitle: "紫陽花",
         category: "Amethyst",
         description: [
             "やわらかな彩り、",
@@ -86,9 +86,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155861399",
         image: "images/product7.jpeg",
-        alt: "Rayon d’Or",
-        title: "Rayon d’Or",
-        jpTitle: "レヨン・ドール",
+        alt: "Honey Glow",
+        title: "Honey Glow",
+        jpTitle: "蜂蜜のひかり",
         category: "Lemon Quartz",
         description: [
             "派手すぎず、",
@@ -100,9 +100,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155862068",
         image: "images/product8.jpeg",
-        alt: "Rosée des Bois",
-        title: "Rosée des Bois",
-        jpTitle: "ロゼ・デ・ボワ",
+        alt: "Indigo Dew",
+        title: "Indigo Dew",
+        jpTitle: "藍の雫",
         category: "Moss green kyanite",
         description: [
             "シックな深み、",
@@ -114,9 +114,9 @@ const products = [
     {
         url: "https://cocoandcoco.base.shop/items/155862428",
         image: "images/product9.jpeg",
-        alt: "Éclat d’Améthyste",
-        title: "Éclat d’Améthyste",
-        jpTitle: "エクラ・ダメティスト",
+        alt: "Violet Light",
+        title: "Violet Light",
+        jpTitle: "紫の光",
         category: "Amethyst",
         description: [
             "澄んだ透明感、",
