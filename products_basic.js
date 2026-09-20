@@ -124,7 +124,133 @@ const products = [
         ],
         price: "¥3,600",
         tag: "NEW"
-    }
+    },
+	{
+		url: "https://cocoandcoco.base.shop/items/158506378",
+		image: "images/product11.jpeg",
+		alt: "Jewel Box Bracelet",
+		title: "Jewel Box Bracelet",
+		jpTitle: "宝石箱ブレス",
+		category: "Natural stones",
+		description: [
+			"彩り豊か",
+			"前向きな印象"
+		],
+		price: "¥6,400",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506371",
+		image: "images/product10.jpeg",
+		alt: "Iris Opal",
+		title: "Iris Opal",
+		jpTitle: "虹彩のオパール ",
+		category: "Opal",
+		description: [
+			"自由な発想",
+			"自分らしい魅力"
+		],
+		price: "¥6,400",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506384",
+		image: "images/product12.jpeg",
+		alt: "Crimson Ruby",
+		title: "Crimson Ruby",
+		jpTitle: "深紅のルビー",
+		category: "Ruby",
+		description: [
+			"洗練された華やかさ",
+			"上品な彩り"
+		],
+		price: "¥8,800",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506389",
+		image: "images/product13.jpeg",
+		alt: "Iris Drop",
+		title: "Iris Drop",
+		jpTitle: "虹彩の雫",
+		category: "Opal",
+		description: [
+			"優雅な輝き",
+			"上品な彩り"
+		],
+		price: "¥6,400",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506394",
+		image: "images/product14.jpeg",
+		alt: "Crimson Drop",
+		title: "Crimson Drop",
+		jpTitle: "深紅の雫",
+		category: "Ruby",
+		description: [
+			"優雅な光沢",
+			"上品な華やかさ"
+		],
+		price: "¥6,400",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506398",
+		image: "images/product15.jpeg",
+		alt: "Crimson Rough Stone",
+		title: "Crimson Rough Stone",
+		jpTitle: "深紅の原石",
+		category: "Ruby",
+		description: [
+			"優雅な光沢",
+			"気品と個性"
+		],
+		price: "¥6,400",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506406",
+		image: "images/product16.jpeg",
+		alt: "Starlit Rose Pendant Top",
+		title: "Starlit Rose Pendant Top",
+		jpTitle: "星空と薔薇のペンダントトップ",
+		category: "Lapis Lazuli",
+		description: [
+			"優しい彩り",
+			"知的で華やか"
+		],
+		price: "¥18,000",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506411",
+		image: "images/product17.jpeg",
+		alt: "Aster Amethyst Pendant Top",
+		title: "Aster Amethyst Pendant Top",
+		jpTitle: "紫苑のアメジスト ペンダントトップ",
+		category: "Amethyst",
+		description: [
+			"落ち着きと気品",
+			"洗練された美しさ"
+		],
+		price: "¥18,000",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/158506416",
+		image: "images/product18.jpeg",
+		alt: "Crimson Garnet Pendant Top",
+		title: "Crimson Garnet Pendant Top",
+		jpTitle: "深紅のガーネット ペンダントトップ",
+		category: "Garnet",
+		description: [
+			"洗練された華やかさ",
+			"特別感のある彩り"
+		],
+		price: "¥18,000",
+		tag: "New"
+	}
 ];
 
 const productList = document.getElementById("product-grid");
