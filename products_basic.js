@@ -11,7 +11,7 @@ const products = [
             "気持ちを爽やかに。"
         ],
         price: "¥4,800",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155858614",
@@ -25,7 +25,7 @@ const products = [
             "視野を広げる。"
         ],
         price: "¥4,800",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155859061",
@@ -39,7 +39,7 @@ const products = [
             "派手すぎない存在感。"
         ],
         price: "¥3,600",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155859461",
@@ -53,7 +53,7 @@ const products = [
             "さりげない個性。"
         ],
         price: "¥4,200",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155859674",
@@ -67,7 +67,7 @@ const products = [
             "上品で軽やか。"
         ],
         price: "¥4,200",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155860990",
@@ -81,7 +81,7 @@ const products = [
             "落ち着いた華やかさ。"
         ],
         price: "¥4,200",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155861399",
@@ -95,7 +95,7 @@ const products = [
             "上品に寄り添う。"
         ],
         price: "¥3,600",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155862068",
@@ -109,7 +109,7 @@ const products = [
             "知性と品のよさ。"
         ],
         price: "¥4,200",
-        tag: "NEW"
+        tag: ""
     },
     {
         url: "https://cocoandcoco.base.shop/items/155862428",
@@ -123,7 +123,7 @@ const products = [
             "落ち着いた華やかさ。"
         ],
         price: "¥3,600",
-        tag: "NEW"
+        tag: ""
     },
 	{
 		url: "https://cocoandcoco.base.shop/items/158506378",
@@ -137,7 +137,7 @@ const products = [
 			"前向きな印象"
 		],
 		price: "¥6,400",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506371",
@@ -151,7 +151,7 @@ const products = [
 			"自分らしい魅力"
 		],
 		price: "¥6,400",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506384",
@@ -165,7 +165,7 @@ const products = [
 			"上品な彩り"
 		],
 		price: "¥8,800",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506389",
@@ -179,7 +179,7 @@ const products = [
 			"上品な彩り"
 		],
 		price: "¥6,400",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506394",
@@ -193,7 +193,7 @@ const products = [
 			"上品な華やかさ"
 		],
 		price: "¥6,400",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506398",
@@ -207,7 +207,7 @@ const products = [
 			"気品と個性"
 		],
 		price: "¥6,400",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506406",
@@ -221,7 +221,7 @@ const products = [
 			"知的で華やか"
 		],
 		price: "¥18,000",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506411",
@@ -235,7 +235,7 @@ const products = [
 			"洗練された美しさ"
 		],
 		price: "¥18,000",
-		tag: "New"
+		tag: ""
 	},
 	{
 		url: "https://cocoandcoco.base.shop/items/158506416",
@@ -249,6 +249,34 @@ const products = [
 			"特別感のある彩り"
 		],
 		price: "¥18,000",
+		tag: ""
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/163169974",
+		image: "images/product19.jpeg",
+		alt: "Oval Garnet Silver Ring",
+		title: "Oval Garnet Silver Ring",
+		jpTitle: "ガーネットオーバルシルバーリング ",
+		category: "Garnet",
+		description: [
+			"大人の気品",
+			"凛とした美しさ"
+		],
+		price: "¥10,800",
+		tag: "New"
+	},
+	{
+		url: "https://cocoandcoco.base.shop/items/163169983",
+		image: "images/product20.jpeg",
+		alt: "Oval Tanzanite Silver Ring",
+		title: "Oval Tanzanite Silver Ring",
+		jpTitle: "タンザナイトオーバシルバーリング",
+		category: "Tanzanite",
+		description: [
+			"特別な彩り",
+			"さりげない華やかさ"
+		],
+		price: "¥8,800",
 		tag: "New"
 	}
 ];
