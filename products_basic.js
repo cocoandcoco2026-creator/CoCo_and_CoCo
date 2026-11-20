@@ -61,7 +61,7 @@ const products = [
         alt: "Prism of Light",
         title: "Prism of Light",
         jpTitle: "光のプリズム",
-        category: "Lemon Quartz",
+        category: "Citrine",
         description: [
             "洗練された華やかさ、",
             "上品で軽やか。"
@@ -89,7 +89,7 @@ const products = [
         alt: "Honey Glow",
         title: "Honey Glow",
         jpTitle: "蜂蜜のひかり",
-        category: "Lemon Quartz",
+        category: "Citrine",
         description: [
             "派手すぎず、",
             "上品に寄り添う。"
